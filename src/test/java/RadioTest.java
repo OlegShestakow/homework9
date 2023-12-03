@@ -5,7 +5,7 @@ public class RadioTest {
 
     @Test
     public void shouldSetNumberOfRadiostation() {
-        Radio radiostation = new Radio();
+        Radio radiostation = new Radio(10);
 
         radiostation.setCurrentNumberOfRadiostation(8);
 
@@ -18,7 +18,7 @@ public class RadioTest {
 
     @Test
     public void shouldSetMinimalNumberOfRadiostation() {
-        Radio radiostation = new Radio();
+        Radio radiostation = new Radio(10);
 
         radiostation.setCurrentNumberOfRadiostation(0);
 
@@ -31,7 +31,7 @@ public class RadioTest {
 
     @Test
     public void shouldSetMaximalNumberOfRadiostation() {
-        Radio radiostation = new Radio();
+        Radio radiostation = new Radio(10);
 
         radiostation.setCurrentNumberOfRadiostation(9);
 
@@ -44,7 +44,7 @@ public class RadioTest {
 
     @Test
     public void shouldSetBelowMinimalNumberOfRadiostation() {
-        Radio radiostation = new Radio();
+        Radio radiostation = new Radio(10);
 
         radiostation.setCurrentNumberOfRadiostation(5);
         radiostation.setCurrentNumberOfRadiostation(-3);
@@ -58,7 +58,7 @@ public class RadioTest {
 
     @Test
     public void shouldSetAboveMaximalNumberOfRadiostation() {
-        Radio radiostation = new Radio();
+        Radio radiostation = new Radio(10);
 
         radiostation.setCurrentNumberOfRadiostation(6);
         radiostation.setCurrentNumberOfRadiostation(12);
@@ -72,7 +72,7 @@ public class RadioTest {
 
     @Test
     public void shouldPlayNext() {
-        Radio radiostation = new Radio();
+        Radio radiostation = new Radio(10);
 
         radiostation.setCurrentNumberOfRadiostation(4);
         radiostation.next();
@@ -85,7 +85,7 @@ public class RadioTest {
 
     @Test
     public void shouldPlayNextIfActual9() {
-        Radio radiostation = new Radio();
+        Radio radiostation = new Radio(10);
 
         radiostation.setCurrentNumberOfRadiostation(9);
         radiostation.next();
@@ -98,7 +98,7 @@ public class RadioTest {
 
     @Test
     public void shouldPlayPrev() {
-        Radio radiostation = new Radio();
+        Radio radiostation = new Radio(10);
 
         radiostation.setCurrentNumberOfRadiostation(5);
         radiostation.prev();
@@ -111,7 +111,7 @@ public class RadioTest {
 
     @Test
     public void shouldPlayPrevIfActual0() {
-        Radio radiostation = new Radio();
+        Radio radiostation = new Radio(10);
 
         radiostation.setCurrentNumberOfRadiostation(0);
         radiostation.prev();
